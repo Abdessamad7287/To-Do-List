@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+
+ /* variables */
+:root {
+    --mainBgClr: #F4F7FC;
+    --navBgClr: #2C3E50;
+    --btnBgClr: #3498DB;
+    --btnHvrBgClr: #0044ff;
+    --ftrBgClr: #2C3E50;
+    --lignBgClr: #FFD700;
+    --featureBgClr: #fbf3f3;
+    --mainTxtClr: #2C3E50;
+    --scdTxtClr: #95A5A6;
+    --plchodrTxtClr: #BDC3C7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--mainBgClr);
+    overflow-x: hidden; /* منع التمرير الأفقي */
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    margin-top: 20px;
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    color: var(--mainTxtClr);
+    cursor: pointer;
+    position: relative;
+    transition: transform .3s ease, color .3s ease;
+    
+}
+
+#title:hover {
+    color: var(--lignBgClr);
+    transform: scale(1.1);
+}
+#title::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 3px;
+    background-color: var(--lignBgClr);
+    transform: translate(-50%, -50%);
+    transition: width .3s ease, left .3s ease;
+}
+
+#title:hover::before {
+    width: 0;
+    left: 50%;
+}
+
+nav {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 50px;
+    height: 20vh;
+    background-color: var(--navBgClr);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding-top: px;
+    margin-left: 20px;
+    border-radius: 10px;
+    transform: translateY(-50%);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 10px ;
+}
+
+i {
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    display: inline-block;
+    position: relative;
+}
+
+i:hover {
+    color: #FFD700;
+    transform: translateY(-5px) scale(1.2) rotate(10deg) ;
+    text-shadow: 0 0 10px rgba(255, 217, 0, 0.85);
+}
+
+header {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: "Grechen Fuemen", serif;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-family: "Walter Turncoat", serif;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--btnBgClr);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color .3s ease;
+    font-family: "Redressed", serif;
+    font-weight: 900;
+}
+
+.btn:hover {
+    background-color: var(--btnHvrBgClr);
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background-color: var(--featureBgClr);
+    padding: 20px;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+}
+.img1 {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-us h2{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 20px;
+    font-family: "Grechen Fuemen", serif;
+    color: var(--mainTxtClr);
+}
+
+.contact-form {
+    background-image: url(images/Premium\ Vector\ _\ People\ with\ gadgets\ communicate\ online.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 60px;
+    width: 80%;
+    margin-top: 52rem ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--mainTxtClr);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+}
+
+.contact-form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 40px;
+    border: 5px solid #000000;
+    border-radius: 10px;
+    background-color: rgb(216, 197, 197);
+    color: var(--scdTxtClr);
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+
+}
+
+input:hover, textarea:hover {
+    border-color: var(--lignBgClr);
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.7);
+}
+
+.btn1 {
+    padding: 12px 20px;
+    background-color: var(--btnBgClr);
+    color: var(--mainTxtClr);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.btn1:hover {
+    background-color: var(--btnHvrBgClr);
+}
+
+.btn1:active {
+    transform: scale(0.9);
+}
+
+.success-msg {
+    display: none;
+    color: green;
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-container div {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-logo h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-top: 15px ;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f39c12;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-social a, .footer-social i {
+    color: #fff;
+    font-size: 22px;
+    margin-top: 20px;
+    transition: 0.3s;
+    margin-left: 10px;
+}
+
+.footer-social a:hover {
+    color: #f39c12;
+}
+
+.footer-credit {
+    margin-top: 20px;
+    font-size: 2rem;
+    opacity: 0.7;
+}
